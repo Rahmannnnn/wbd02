@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	background: whitesmoke;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background: white;
+    box-shadow: 0 5px 30px #293241;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    
+}
+
+.banner {
+    flex-basis: 50%;
+    background: #293241;
+    color: white;
+    padding: 200px 40px 0 40px;
+}
+
+.banner h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.field {  
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 40%;
+    justify-content: center;
+}
+
+.field input {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.field input {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999;
+    font-size: 14px;
+}
+
+.field input[type="submit"] {
+    border-bottom: none;
+    cursor: pointer;
+    background: #293241;
+    color: white;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.field input[type="submit"]:hover{
+	box-shadow: 5px 5px 20px rgba(41, 50, 65, 0.3);
+}
+
+.field form h5 {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #999;
+}
+
+.field form h5 a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #293241;
+}
+
+.field form h5 a:hover {
+	color: #3D5A80;
+	transition: .3s;
+}
+
+.field form i {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #999;
+    transition: .5s;
+}
+
+.field form .fa-eye {
+    display: hidden;
+}
+
+.field form div {
+    position: relative;
+}
+
+.field form div label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #999;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label {
+    top: -12px;
+    left: 0;
+    color:#293241;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.field input:focus, 
+.field input:valid {
+    border-bottom: 2px solid #293241;
+}

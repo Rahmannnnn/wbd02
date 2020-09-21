@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	cursor: auto;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: whitesmoke;
+}
+
+header {
+    position: fixed;
+    background: #293241;
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+.logo h3{
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.logout_btn {
+    padding: 10px;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    background: #3D5A80;
+    cursor: pointer;
+}
+
+.logout_btn:hover {
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.sidebar {
+    background: #3D5A80;
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: .5s;
+    transition-property: left;
+}
+
+.sidebar .center {
+    text-align: center;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.sidebar .center h5 {
+    font-size: 20px;
+}
+.sidebar .center i {
+    font-size: 100px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.sidebar .text {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+i {
+    cursor: pointer;
+}
+
+.sidebar a {
+    color: white;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: .5s;
+    /* border-top: 1px solid #98C1D9;
+    border-bottom: 1px solid #98C1D9; */
+}
+
+.sidebar a:hover {
+    background: #293241;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+.active {
+    background: #293241;
+}
+
+label #sidebar_btn {
+    z-index: 1;
+    color: white;
+    position: fixed;
+    cursor: pointer;
+    left: 20px;
+    top: 80px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: .5s;
+}
+
+label #sidebar_btn:hover {
+    color: #293241;
+}
+
+#check:checked ~ .sidebar .center {
+    opacity: 0;
+    transition: .5s;
+}
+
+#check:checked ~ .sidebar {
+    left: -190px;
+}
+
+#check:checked ~ .sidebar a span {
+    display: none;
+}
+
+#check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+.content {
+    margin: 0;
+    height: 100vh;
+    padding-left: 250px;
+    transition: .5s;
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#check:checked ~ .content {
+    padding-left: 60px;
+}
+
+#check {
+    display: none;
+}
+
+.chat-box {
+    flex-basis: 95%;
+    width: 100%;
+    background: whitesmoke;
+    overflow-y: scroll;
+    margin-top: 70px;
+}
+
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+    background: whitesmoke;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #3D5A80;
+    border-radius: 10px 0 0 10px;
+}
+
+.chat-box .date {
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+}
+
+.chat-box .post-card {
+    background-color: white;
+    color: #293241;
+    margin: 20px 50px 50px 50px;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.box {
+    background: #293241;
+    width: 100%;
+    flex-basis: 5%;
+}
+
+.box form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.box #user_post {
+    width: 100%;
+    margin: 20px 0 20px 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    padding: 10px;
+    resize: none;
+}
+
+.reply {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.reply .reply-area {
+    width: 92.5%;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid grey;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 10px 10px 5px 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    resize: none;
+}
+
+.button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.reply i {
+    font-size: 14px;
+    color: #999;
+    padding: 15px 0 10px 10px;
+    background: none;
+    cursor: pointer;
+}
+
+.reply i:hover {
+    color: #3D5A80;
+    transition: .3s;
+}
+
+.comment {
+    background-color: whitesmoke;
+    padding: 10px 0 30px 0;
+    margin: 0;
+}
+
+.comment:hover {
+    background-color: gainsboro;
+    transition: .3s;
+}
+
+.blank {
+    height: 10px;
+    background-color: #3D5A80;
+}
+
+.box i {
+    margin: 20px 0;
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+}
+
+.box i:hover {
+    color: #3D5A80;
+    transition: .3s;
+}
+
+.post h5, .comment h5 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px 40px;
+}
+
+.title .PostDate {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.Postingan {
+    font-weight: 500;
+    color: #3D5A80;
+    padding: 0 40px;
+}
+
+.countComment {
+    margin-left: 40px;
+    padding: 10px 0;
+}
+.countComment h5 {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.delete {
+    margin-left: 97%;
+    color: #999;
+    font-size: 14px;
+
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.delete:hover {
+    color: #293241;
+    transition: .3s;
+}
