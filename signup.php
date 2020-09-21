@@ -11,7 +11,7 @@ if(isset($_POST["signup"])) {
     //Cek username
     $result = mysqli_query($db, "SELECT * FROM user WHERE username = '$username'");
     if( mysqli_num_rows($result) < 1) {
-        $query = "INSERT INTO user VALUES ('', '$username', '$password', '$name')";
+        $query = "INSERT INTO user VALUES ('$username', '$password', '$name')";
         mysqli_query($db, $query);
 
         $_SESSION["login"] = true;
